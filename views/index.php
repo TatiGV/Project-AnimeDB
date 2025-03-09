@@ -1,5 +1,5 @@
 <?php
-include("./config/connect.php");
+include '../config/connect.php';
 
 $error = "";
 
@@ -35,7 +35,7 @@ mysqli_close($conn);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnimeDB</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../public/styles.css">
 </head>
 
 <body>
@@ -54,7 +54,7 @@ mysqli_close($conn);
     <h2>Lista de Animes</h2>
     <div class="anime-list">
       <?php
-      include("connect.php");
+      include("../config/connect.php");
       $sql = "SELECT * FROM animes ORDER BY id DESC";
       $results = mysqli_query($conn, $sql);
 
